@@ -1,9 +1,3 @@
-var a = [1];
-a.push(2, 3, '', null, undefined);
-var b = a.splice(0, 1, ['del', 'dell']);
-b.push(22);
-console.log(a, b);
-
 /*
   Metadata for the song 'Hotel California' (Eagles, 1977).
   Used JS data types: string, number, boolean, null, undefined, array, object, function
