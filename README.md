@@ -14,3 +14,5 @@ Homeworks, Projects and Exam for Pirple _"Keeping Up With the Javascripts - Part
   ![Homework #04 screenshot](https://img.youtube.com/vi/oCUWujYuufQ/default.jpg)](https://youtu.be/oCUWujYuufQ)
 - [Homework #05  
   ![Homework #05 screenshot](https://img.youtube.com/vi/A45qROl3fso/default.jpg)](https://youtu.be/A45qROl3fso)
+- [Homework #06  
+  ![Homework #06 screenshot](https://img.youtube.com/vi/m-lOreXJ37w/default.jpg)](https://youtu.be/m-lOreXJ37w)
