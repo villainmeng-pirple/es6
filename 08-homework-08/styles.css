@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: forestgreen;
+  margin: 0;
+}
+
+#game-field {
+  margin-top: 64px;
+}
+
+.row {
+  display: flex;
+  margin: 0 auto;
+  width: 312px;
+}
+
+.cell {
+  background-color: lightgreen;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 100px;
+  margin: 2px;
+  position: relative;
+  width: 100px;
+}  
+
+.sign {
+  bottom: 0;
+  cursor: not-allowed;
+  font-family: monospace;
+  font-size: 75px;
+  left: 0;
+  line-height: 100px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+
+.cross {
+  color: red;
+}
+
+.circle {
+  color: black;
+  font-weight: bold;
+}
