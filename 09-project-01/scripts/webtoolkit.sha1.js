@@ -1,3 +1,16 @@
+/* **
+ * password hashing
+** */
+
+/* eslint-disable no-unused-vars *//* eslint-disable camelcase *//* eslint-disable new-cap */
+function createHash(password) {
+  return sha1(password);
+}
+
+function checkPassword(password, hash) {
+  return sha1(password) === hash;
+}
+
 /**
  *
  *  Secure Hash Algorithm (SHA1)
@@ -5,8 +18,7 @@
  *
  **/
 
-/* eslint-disable no-unused-vars *//* eslint-disable camelcase *//* eslint-disable new-cap */
-export function sha1(msg) {
+function sha1(msg) {
   function rotate_left(n, s) {
     var t4 = (n << s) | (n >>> (32 - s));
     return t4;

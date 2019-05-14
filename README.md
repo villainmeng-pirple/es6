@@ -20,3 +20,5 @@ Homeworks, Projects and Exam for Pirple _"Keeping Up With the Javascripts - Part
   ![Homework #07 screenshot](https://img.youtube.com/vi/VKH-nYwjMPY/default.jpg)](https://youtu.be/VKH-nYwjMPY)
 - [Homework #08 - Events - Tic-Tac-Toe  
   ![Homework #08 screenshot](https://img.youtube.com/vi/aSoTfKjJpyc/default.jpg)](https://youtu.be/aSoTfKjJpyc)
+- [Project #01 - Events - To Do List  
+  ![Homework #08 screenshot](https://img.youtube.com/vi//default.jpg)](https://youtu.be/)
