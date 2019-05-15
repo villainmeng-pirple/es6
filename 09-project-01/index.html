@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="to-do-list-icon.png" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"> -->
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="bulma.css">
@@ -17,6 +18,7 @@
   <script src="scripts/users-handling.js"></script>
   <script src="scripts/list-handling.js"></script>
   <script src="scripts/dashboard-handling.js"></script>
+  <script src="scripts/test-data.js"></script>
   <script src="scripts/application.js"></script>
   <title>To Do List</title>
 </head>
@@ -43,17 +45,17 @@
   </header>
 
   <main class="hero">
-
-    <section id="start-page-section" class="hero-body has-text-centered">
-      <p class="start-page-text has-text-info limited-width narrow">
-        Please <span class="has-text-weight-semibold">login</span>
-        or <span class="has-text-weight-semibold">register</span> for&nbsp;free
+    <div class="bg-img"></div>
+    <section id="start-page-section" class="hero-body has-text-centered has-text-weight-semibold">
+      <p class="start-page-text has-text-black limited-width narrow">
+        Please <span class="has-text-weight-bold">login</span>
+        or <span class="has-text-weight-bold">register</span> for&nbsp;free
         to&nbsp;start using <span class="has-text-weight-bold">To&nbsp;Do&nbsp;Lists</span>
       </p>
     </section>
 
     <section id="sign-up-section" class="hero-body concealed">
-      <h1 class="title has-text-centered has-text-primary">Register</h1>
+      <h1 class="title has-text-centered has-text-black has-text-weight-semibold">Register</h1>
       <form action="javascript:0" class="limited-width narrow">
         <div class="field">
           <div class="control has-icons-left">
@@ -103,7 +105,7 @@
     </section>
 
     <section id="log-in-section" class="hero-body concealed">
-      <h1 class="title has-text-centered has-text-primary">Login</h1>
+      <h1 class="title has-text-centered has-text-black has-text-weight-semibold">Login</h1>
       <form action="javascript:0" class="limited-width narrow">
         <div class="field">
           <div class="control has-icons-left">
@@ -136,7 +138,7 @@
     </section>
 
     <section id="settings-section" class="hero-body concealed">
-      <h1 class="title has-text-centered has-text-primary">Account settings</h1>
+      <h1 class="title has-text-centered has-text-black has-text-weight-semibold">Account settings</h1>
       <form action="javascript:0" class="limited-width narrow">
         <div class="field">
           <div class="control has-icons-left">
@@ -189,7 +191,7 @@
     </section>
 
     <section id="dashboard-section" class="hero-body concealed">
-      <h1 class="title has-text-centered has-text-primary">Dashboard</h1>
+      <h1 class="title has-text-centered has-text-black has-text-weight-semibold">Dashboard</h1>
       <ul id="dashboard-lists" class="list limited-width"></ul>
       <form action="javascript:0" class="limited-width">
         <button id="dashboard-add-button" class="button is-info">Create New to-do List</button>
@@ -197,7 +199,7 @@
     </section>
 
     <section id="list-section" class="hero-body concealed">
-      <h1 class="title has-text-centered has-text-primary">Tasks</h1>
+      <h1 class="title has-text-centered has-text-black has-text-weight-semibold">Tasks</h1>
       <form action="javascript:0" class="limited-width">
         <div class="field">
           <div class="control has-icons-left">

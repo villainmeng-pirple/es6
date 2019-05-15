@@ -1,3 +1,7 @@
+:root {
+  --nav-bar-height: 4rem;
+}
+
 /* **
  * For dynamic styling from JS
 ** */
@@ -24,7 +28,7 @@
 
 header {
   display: flex;
-  height: 5rem;
+  height: var(--nav-bar-height);
   justify-items: center;
   left: 0;
   padding: 0 1rem 0 1rem;
@@ -32,10 +36,6 @@ header {
   top: 0;
   width: 100%;
   z-index: 5; /* because bulma input icons have z-index=4 */
-}
-
-main {
-  margin-top: 5rem;
 }
 
 .nav-items.columns /* too composed selector for overriding bulma specificity */ {
@@ -51,6 +51,15 @@ main {
 
 .nav-item.column {
   padding: 0;
+}
+
+.list-item.columns {
+  padding: 0.2rem 1rem;
+}
+
+.list-item > span.column {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .list-item > a.column {
@@ -112,4 +121,28 @@ main {
 
 #settings-section > form > div.is-grouped > div:last-of-type {
   margin-left: auto;
+}
+
+/* **
+ * Background
+** */
+
+main {
+  margin-top: var(--nav-bar-height);
+  min-height: calc(100vh - var(--nav-bar-height));
+}
+
+.bg-img {
+  background-attachment: fixed;
+  background-image: url('to-do-list.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(120%);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: var(--nav-bar-height);
+  width: 100%;
+  z-index: -1;
 }

@@ -193,7 +193,7 @@ function Application() {
       this.showSettingsError(true, 'sign-up-error', emailInput.value);
       return false;
     }
-    const lastUserId = this.users.size === 0 ? 1 : Array.from(this.users)[this.users.size - 1][1].id;
+    const lastUserId = this.users.size === 0 ? 0 : Array.from(this.users)[this.users.size - 1][1].id;
     this.userData = new UserData(lastUserId + 1, emailInput.value, createHash(passwordInput.value),
         firstNameInput.value, lastNameInput.value);
     this.users.set(this.userData.email, {password: this.userData.password, id: this.userData.id});
