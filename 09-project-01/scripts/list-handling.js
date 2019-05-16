@@ -123,7 +123,7 @@ function ListHandling(application) {
     this.discardChangesAndQuit();
   };
 
-  this.itemAddClicked = (e) => {
+  this.itemAddClicked = () => {
     if (!this.textInputElement.checkValidity()) {
       return;
     }
@@ -141,6 +141,14 @@ function ListHandling(application) {
     setTimeout(() => {
       this.textInputElement.value = '';
     }, 1);
+  };
+
+  this.itemTextInputKeyup = (e) => {
+    if (e.key === 'Enter') {
+      this.itemAddClicked();
+    } else if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+      this.listSaveClicked();
+    }
   };
 
   this.showListTitleError = (isNeedShow) => {
@@ -164,4 +172,6 @@ function ListHandling(application) {
   document.getElementById('list-save-button').addEventListener('click', this.listSaveClicked);
   document.getElementById('list-cancel-button').addEventListener('click', this.listCancelClicked);
   document.getElementById('item-add-button').addEventListener('click', this.itemAddClicked);
+  document.getElementById('item-text-input').addEventListener('keyup', this.itemTextInputKeyup);
+  document.querySelector(`#list-section > form`).addEventListener('submit', () => this.listSaveClicked());
 }

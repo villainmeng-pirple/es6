@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   for (const button of application.navButtons) {
     button.addEventListener('click', application.navButtonClicked);
   }
+  application.addFormSubmitListener('sign-up');
+  application.addFormSubmitListener('log-in');
+  application.addFormSubmitListener('settings');
 });
 
 function Application() {
@@ -88,8 +91,8 @@ function Application() {
     }
   };
 
-  this.navButtonClicked = (e) => {
-    const buttonId = e.currentTarget.id;
+  this.navButtonClicked = (eventOrButtonId) => {
+    const buttonId = typeof eventOrButtonId === 'string' ? eventOrButtonId : eventOrButtonId.currentTarget.id;
     switch (buttonId) {
       case 'log-in-button':
         this.showLogInError(false);
@@ -247,5 +250,10 @@ function Application() {
       this.logInEmailInput.value = '';
       this.logInPasswordInput.value = '';
     }, 1);
+  };
+
+  this.addFormSubmitListener = (sectionPrefix) => {
+    document.querySelector(`#${sectionPrefix}-section > form`).
+        addEventListener('submit', () => application.navButtonClicked(`${sectionPrefix}-submit-button`));
   };
 }

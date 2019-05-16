@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="to-do-list-icon.png" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css"> -->
+  <link rel="shortcut icon" href="to-do-list-icon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <link rel="stylesheet" href="bulma.css">
+
   <link rel="stylesheet" href="styles.css">
   <script src="scripts/webtoolkit.sha1.js"></script>
   <script src="scripts/item.js"></script>
@@ -26,9 +27,10 @@
 <body>
   <header class="has-background-white-ter">
     <nav class="nav-items columns is-mobile">
-      <a id="home-button" class="nav-item column icon is-medium has-text-success" title="Home">
+      <a id="home-button" class="nav-item column is-1 icon is-medium has-text-success" title="Home">
         <i class="fa fa-tasks fa-2x"></i>
       </a>
+      <div class="column"></div>
       <a id="log-in-button" class="nav-item column is-1 icon is-medium has-text-success has-text-right concealed" title="Login">
         <i class="fa fa-sign-in-alt fa-2x"></i>
       </a>
@@ -46,6 +48,7 @@
 
   <main class="hero">
     <div class="bg-img"></div>
+
     <section id="start-page-section" class="hero-body has-text-centered has-text-weight-semibold">
       <p class="start-page-text has-text-black limited-width narrow">
         Please <span class="has-text-weight-bold">login</span>
@@ -59,7 +62,8 @@
       <form action="javascript:0" class="limited-width narrow">
         <div class="field">
           <div class="control has-icons-left">
-            <input id="sign-up-first-name-input" class="input" type="text" placeholder="First name" required>
+            <input id="sign-up-first-name-input" class="input" type="text" maxlength="64"
+                placeholder="First name" required>
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -67,7 +71,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="sign-up-last-name-input" class="input" type="text" placeholder="Last name" required>
+            <input id="sign-up-last-name-input" class="input" type="text" maxlength="64"
+              placeholder="Last name" required>
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -75,7 +80,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="sign-up-password-input" class="input" type="password" placeholder="Password" required>
+            <input id="sign-up-password-input" class="input" type="password" maxlength="64"
+              placeholder="Password" required>
             <span class="icon is-small is-left">
               <i class="fas fa-lock"></i>
             </span>
@@ -83,7 +89,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="sign-up-email-input" class="input" type="email" placeholder="Email" required>
+            <input id="sign-up-email-input" class="input" type="email" maxlength="64"
+              placeholder="Email" required>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -109,7 +116,8 @@
       <form action="javascript:0" class="limited-width narrow">
         <div class="field">
           <div class="control has-icons-left">
-            <input id="log-in-email-input" class="input" type="email" placeholder="Email" required>
+            <input id="log-in-email-input" class="input" type="email" maxlength="64"
+              placeholder="Email" required>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -117,7 +125,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="log-in-password-input" class="input" type="password" placeholder="Password" required>
+            <input id="log-in-password-input" class="input" type="password" maxlength="64"
+              placeholder="Password" required>
             <span class="icon is-small is-left">
               <i class="fas fa-lock"></i>
             </span>
@@ -142,7 +151,8 @@
       <form action="javascript:0" class="limited-width narrow">
         <div class="field">
           <div class="control has-icons-left">
-            <input id="settings-email-input" class="input" type="email" placeholder="Email" required>
+            <input id="settings-email-input" class="input" type="email" maxlength="64"
+              placeholder="Email" required>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -150,7 +160,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="settings-password-input" class="input" type="password" placeholder="Password" required>
+            <input id="settings-password-input" class="input" type="password" maxlength="64"
+              placeholder="Password" required>
             <span class="icon is-small is-left">
               <i class="fas fa-lock"></i>
             </span>
@@ -158,7 +169,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="settings-first-name-input" class="input" type="text" placeholder="First name" required>
+            <input id="settings-first-name-input" class="input" type="text" maxlength="64"
+              placeholder="First name" required>
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -166,7 +178,8 @@
         </div>
         <div class="field">
           <div class="control has-icons-left">
-            <input id="settings-last-name-input" class="input" type="text" placeholder="Last name" required>
+            <input id="settings-last-name-input" class="input" type="text" maxlength="64"
+              placeholder="Last name" required>
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -203,7 +216,8 @@
       <form action="javascript:0" class="limited-width">
         <div class="field">
           <div class="control has-icons-left">
-            <input id="list-title-input" class="input" type="text" placeholder="List name" required>
+            <input id="list-title-input" class="input" type="text" maxlength="64"
+              placeholder="List name" required>
             <span class="icon is-small is-left">
               <i class="fa fa-tasks"></i>
             </span>
@@ -226,7 +240,8 @@
       <form action="javascript:0" class="limited-width">
         <div class="field">
           <div class="control has-icons-left">
-            <input id="item-text-input" type="text" class="input" placeholder="New task text" required>
+            <input id="item-text-input" type="text" class="input" maxlength="1024"
+              placeholder="New task text" required>
             <span class="icon is-small is-left">
               <i class="fa fa-check-square"></i>
             </span>
