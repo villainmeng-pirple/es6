@@ -7,6 +7,7 @@ function UsersHandling(application) {
   this.application = application;
 
   this.readAllUsers = () => {
+    // this.application.remoteStorage.loadUserLogins();
     return this.application.storage.loadUserLogins();
   };
 
@@ -28,6 +29,7 @@ function UsersHandling(application) {
 
   this.doDelete = (buttonId) => {
     this.application.users.delete(this.application.userData.email);
+    // this.application.remoteStorage.deleteUserData(this.application.userData);
     this.application.storage.deleteUserData(this.application.userData);
     this.application.isLoggedIn = false;
     this.application.switchLoggedInState();

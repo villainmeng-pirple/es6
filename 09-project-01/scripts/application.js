@@ -16,6 +16,7 @@ function Application() {
   this.userData;
   this.messagesHandling = new MessagesHandling(this);
   this.storage = new Storage();
+  // this.remoteStorage = new RemoteStorage();
   this.usersHandling = new UsersHandling(this);
   this.dashboardHandling = new DashboardHandling(this);
   this.listHandling = new ListHandling(this);
@@ -179,6 +180,7 @@ function Application() {
     this.userData.firstName = firstNameInput.value;
     this.userData.lastName = lastNameInput.value;
     this.users.set(this.userData.email, {password: this.userData.password, id: this.userData.id});
+    // this.remoteStorage.storeUserData(this.userData);
     this.storage.storeUserData(this.userData);
     return true;
   };
@@ -200,6 +202,7 @@ function Application() {
     this.userData = new UserData(lastUserId + 1, emailInput.value, createHash(passwordInput.value),
         firstNameInput.value, lastNameInput.value);
     this.users.set(this.userData.email, {password: this.userData.password, id: this.userData.id});
+    // this.remoteStorage.storeUserData(this.userData);
     this.storage.storeUserData(this.userData);
     this.usersHandling.doUserLogIn(true);
     return true;
@@ -212,6 +215,7 @@ function Application() {
     const email = this.logInEmailInput.value;
     const password = createHash(this.logInPasswordInput.value);
     if (this.usersHandling.tryLogInUser(email, password)) {
+      // this.remoteStorage.loadUserData(this.users.get(email).id);
       this.userData = JSON.parse(this.storage.loadUserData(this.users.get(email).id));
       this.usersHandling.doUserLogIn(true);
 

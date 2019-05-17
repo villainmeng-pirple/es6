@@ -15,6 +15,7 @@
   <script src="scripts/list.js"></script>
   <script src="scripts/userdata.js"></script>
   <script src="scripts/messages-handling.js"></script>
+  <script src="scripts/remote-storage.js"></script>
   <script src="scripts/storage.js"></script>
   <script src="scripts/users-handling.js"></script>
   <script src="scripts/list-handling.js"></script>
@@ -97,7 +98,7 @@
           </div>
         </div>
         <div class="notification is-danger concealed">
-          <button class="delete"></button>
+          <button class="delete" type="button"></button>
           <span id="sign-up-error"></span>
         </div>
         <div class="field is-grouped">
@@ -133,7 +134,7 @@
           </div>
         </div>
         <div class="notification is-danger concealed">
-          <button class="delete"></button>
+          <button class="delete" type="button"></button>
           <span id="log-in-error">Wrong email or password!</span>
         </div>
         <div class="field is-grouped">
@@ -186,7 +187,7 @@
           </div>
         </div>
         <div class="notification is-danger concealed">
-          <button class="delete"></button>
+          <button class="delete" type="button"></button>
           <span id="settings-error"></span>
         </div>
         <div class="field is-grouped">
@@ -224,7 +225,7 @@
           </div>
         </div>
         <div class="notification is-danger concealed">
-          <button class="delete"></button>
+          <button class="delete" type="button"></button>
           <span id="list-title-error">List with such title already exists!</span>
         </div>
         <div class="field is-grouped">
@@ -248,7 +249,7 @@
           </div>
         </div>
         <div class="notification is-danger concealed">
-          <button class="delete"></button>
+          <button class="delete" type="button"></button>
           <span id="item-text-error">Item with such text already exists!</span>
         </div>
         <button id="item-add-button" class="button is-info">Add new to-do item</button>
@@ -260,7 +261,7 @@
     <div class="modal-card is-mobile">
       <header class="modal-card-head has-background-danger">
         <p class="modal-card-title has-text-white">Confirm delete</p>
-        <button id="confirm-modal-delete-button" class="delete"></button>
+        <button id="confirm-modal-delete-button" class="delete" type="button"></button>
       </header>
 
       <section class="modal-card-body">
