@@ -5,11 +5,12 @@
 /* eslint-disable no-unused-vars */
 function Storage() {
   this.storage = window['localStorage'];
+  this.keyPrefix = 'tdl-user-';
 
   this.loadUserLogins = () => {
     const userLogins = new Map();
-    for (var key in localStorage) {
-      if (localStorage.hasOwnProperty(key)) {
+    for (const key in localStorage) {
+      if (localStorage.hasOwnProperty(key) && key.indexOf(this.keyPrefix) >= 0) {
         const userData = JSON.parse(localStorage.getItem(key));
         userLogins.set(userData.email, {password: userData.password, id: userData.id});
       }
@@ -30,6 +31,6 @@ function Storage() {
   };
 
   this.getKeyById = (id) => {
-    return `tdl-user-${id.toString().padStart(5, '0')}`;
+    return `${this.keyPrefix}${id.toString().padStart(5, '0')}`;
   };
 }
