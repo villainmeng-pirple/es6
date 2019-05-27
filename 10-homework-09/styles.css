@@ -1,0 +1,148 @@
+:root {
+  --nav-bar-height: 4rem;
+}
+
+/* **
+ * For dynamic styling from JS
+** */
+
+.concealed {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#dashboard-lists > li.list-item:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.list-item-done {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/* **
+ * Navigation
+** */
+
+header {
+  display: flex;
+  height: var(--nav-bar-height);
+  justify-items: center;
+  left: 0;
+  padding: 0 1rem 0 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5; /* because bulma input icons have z-index=4 */
+}
+
+.nav-items.columns /* too composed selector for overriding bulma specificity */ {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-item.column:not(.concealed) {
+  margin: 0 0.5rem;
+}
+
+.nav-item.column {
+  padding: 0;
+}
+
+.list-item.columns {
+  padding: 0.2rem 1rem;
+}
+
+.list-item > span.column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list-item > a.column {
+  margin-left: 0.5rem;
+  text-align: right;
+}
+
+.nav-item > a {
+  margin: 0 0.5rem;
+}
+
+/* **
+ * Welcome message
+** */
+
+.start-page-text {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+/* **
+ * Limited width for forms and lists
+** */
+
+.limited-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50rem;
+}
+
+.narrow {
+  max-width: 25rem;
+}
+
+/* **
+ * Make gap between list name input and list of tasks
+** */
+
+#list-items {
+  margin-top: 2rem;
+}
+
+/* **
+ * Adjust bulma columns for displaying iconic buttons
+** */
+
+.list-item.columns /* too composed selector for overriding bulma specificity */ {
+  align-items: center;
+  margin: 0;
+}
+
+.list-item > a.column {
+  padding: 0;
+}
+
+/* **
+ * Move special button to right
+** */
+
+#settings-section > form > div.is-grouped > div:last-of-type {
+  margin-left: auto;
+}
+
+/* **
+ * Background
+** */
+
+main {
+  margin-top: var(--nav-bar-height);
+  min-height: calc(100vh - var(--nav-bar-height));
+}
+
+.bg-img {
+  background-attachment: fixed;
+  background-image: url('to-do-list.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(120%);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: var(--nav-bar-height);
+  width: 100%;
+  z-index: -1;
+}
