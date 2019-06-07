@@ -12,5 +12,5 @@ function Head() {
         ? document.getElementsByTagName('head')[0].appendChild(document.createElement('title'))
         : titleElements[0];
     titleElement.textContent = userName ? `${this.titleText} (${userName})` : this.titleText;
-  }
+  };
 }
