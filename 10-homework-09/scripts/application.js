@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function Application() {
+  const bodyElement = document.getElementsByTagName('body')[0];
+  new Header(bodyElement);
+  new Main(bodyElement);
+  new Modal(bodyElement);
+
+  this.head = new Head();
+
   this.isLoggedIn = false;
   this.userData;
   this.messagesHandling = new MessagesHandling(this);
@@ -25,8 +32,6 @@ function Application() {
 
   this.logInEmailInput = document.getElementById('log-in-email-input');
   this.logInPasswordInput = document.getElementById('log-in-password-input');
-
-  this.head = new Head();
 
   this.navButtons = [
     document.getElementById('sign-up-button'), // 0
