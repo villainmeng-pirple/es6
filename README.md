@@ -23,4 +23,4 @@ Homeworks, Projects and Exam for Pirple _"Keeping Up With the Javascripts - Part
 - [Project #1 - Events - To Do List  
   ![Project #1 screenshot](https://img.youtube.com/vi/24_BOWn8ffI/default.jpg)](https://youtu.be/24_BOWn8ffI)
 - [Homework #09 - Template Literals - To Do List  
-  ![Homework #09 screenshot](https://img.youtube.com/vi//default.jpg)](https://youtu.be/)
+  ![Homework #09 screenshot](https://img.youtube.com/vi/VICP0yvOKjs/default.jpg)](https://youtu.be/VICP0yvOKjs)
