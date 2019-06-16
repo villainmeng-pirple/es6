@@ -17,8 +17,8 @@ const simpleObject = {
   property2: 33,
   property3: false,
 };
-const {property1: value1, property2: value2, property3: value3} = simpleObject;
-console.log(`value1='${value1}'; value2='${value2}'; value3='${value3}'`);
+const {property1: value1, property2, property3: value3} = simpleObject;
+console.log(`value1='${value1}'; value2='${property2}'; value3='${value3}'`);
 
 
 /* ***
@@ -32,9 +32,8 @@ const nestedArray = [
   [1, 2, 3],
   ['a', 'b', 'c'],
 ];
-const [[el1, el2, el3], [el4, el5, el6]] = nestedArray;
-console.log(`element1='${el1}'; element2='${el2}'; element3='${el3}'`);
-console.log(`element4='${el4}'; element5='${el5}'; element6='${el6}'`);
+const [[, el2, el3], [el4, , el6]] = nestedArray;
+console.log(`el2='${el2}'; el3='${el3}'; el4='${el4}'; el6='${el6}'`);
 
 // destructuring nested object
 const nestedObject = {
@@ -47,6 +46,5 @@ const nestedObject = {
     nested2: 9,
   },
 };
-const {property1: {nested1: v1, nested2: v2}, property2: {nested1: v3, nested2: v4}} = nestedObject;
-console.log(`value1='${v1}'; value2='${v2}'; value3='${v3}'; value4='${v4}'`);
-
+const {property1: {nested1: v1, nested2}, property2: {nested2: v4}} = nestedObject;
+console.log(`value1='${v1}'; value2='${nested2}'; value4='${v4}'`);
